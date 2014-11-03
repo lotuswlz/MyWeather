@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="pref_weather_key" type="id">WEATHER_INFO_KEY</item>
+</resources>

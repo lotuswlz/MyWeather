@@ -19,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.thoughtworks.cathywu.myweather.ui.MyCitiesActivity" android:label="@string/search_city"/>
     </application>
 
 </manifest>

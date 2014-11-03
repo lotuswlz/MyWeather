@@ -4,7 +4,9 @@ import android.app.Application;
 
 import com.thoughtworks.cathywu.myweather.R;
 import com.thoughtworks.cathywu.myweather.api.WeatherService;
+import com.thoughtworks.cathywu.myweather.manager.CityManager;
 import com.thoughtworks.cathywu.myweather.ui.MainActivity;
+import com.thoughtworks.cathywu.myweather.ui.MyCitiesActivity;
 
 import dagger.Module;
 import dagger.Provides;
@@ -13,7 +15,8 @@ import retrofit.RestAdapter;
 @Module(
         injects = {
                 MainActivity.class,
-                WeatherService.class
+                WeatherService.class,
+                MyCitiesActivity.class,
         }
 )
 @SuppressWarnings("unused")
@@ -34,6 +37,10 @@ public class MWModule {
 
     @Provides PreferenceUtils providePreferenceUtils() {
         return new PreferenceUtils(application, R.string.preference_file_key);
+    }
+
+    @Provides CityManager provideCityManager() {
+        return new CityManager(application);
     }
 
 

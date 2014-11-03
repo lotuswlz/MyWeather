@@ -30,7 +30,7 @@
         android:layout_height="50dp"
         android:layout_toRightOf="@+id/weather_time"
         android:layout_marginLeft="50dp"
-        android:text="@string/referesh_button"
+        android:background="@drawable/refresh"
         android:onClick="onRefresh"/>
     <TextView
         android:id="@+id/citytemp"

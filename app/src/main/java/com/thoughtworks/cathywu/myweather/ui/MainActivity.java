@@ -1,6 +1,7 @@
 package com.thoughtworks.cathywu.myweather.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -101,7 +102,7 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.my_cities) {
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -109,5 +110,17 @@ public class MainActivity extends Activity {
 
     public void onRefresh(View view) {
         getCityWeatherInfo();
+    }
+
+    public void cleanMemory(MenuItem item) {
+        System.gc();
+    }
+
+    public void showMyCities(MenuItem item) {
+        Intent intent = new Intent(this, MyCitiesActivity.class);
+        String action = getIntent().getAction();
+        intent.setAction(action);
+        intent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+        startActivity(intent);
     }
 }

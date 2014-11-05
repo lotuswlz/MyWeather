@@ -12,7 +12,10 @@ import java.util.List;
  */
 public class CityAdapter extends ArrayAdapter<City> {
 
+    private List<City> cities;
+
     public CityAdapter(Context context, int resource, List<City> cities) {
         super(context, resource, cities);
+        this.cities = cities;
     }
 }

@@ -1,6 +1,7 @@
 package com.thoughtworks.cathywu.myweather.manager;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
@@ -46,4 +47,19 @@ public class CityManager {
             }
         }));
     }
+
+    public City getCity(final String cityId){
+        try {
+            return Iterables.find(cities, new Predicate<City>() {
+                @Override
+                public boolean apply(City city) {
+                    return city.getCityId().equals(cityId);
+                }
+            });
+        } catch (Exception e) {
+            Log.e("get city", e.getMessage());
+        }
+        return null;
+    }
+
 }

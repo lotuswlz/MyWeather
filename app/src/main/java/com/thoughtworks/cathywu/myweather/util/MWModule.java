@@ -5,8 +5,10 @@ import android.app.Application;
 import com.thoughtworks.cathywu.myweather.R;
 import com.thoughtworks.cathywu.myweather.api.WeatherService;
 import com.thoughtworks.cathywu.myweather.manager.CityManager;
+import com.thoughtworks.cathywu.myweather.ui.CitySearchActivity;
 import com.thoughtworks.cathywu.myweather.ui.MainActivity;
 import com.thoughtworks.cathywu.myweather.ui.MyCitiesActivity;
+import com.thoughtworks.cathywu.myweather.ui.adapter.CityAdapter;
 
 import dagger.Module;
 import dagger.Provides;
@@ -16,7 +18,9 @@ import retrofit.RestAdapter;
         injects = {
                 MainActivity.class,
                 WeatherService.class,
+                CitySearchActivity.class,
                 MyCitiesActivity.class,
+                CityAdapter.class
         }
 )
 @SuppressWarnings("unused")

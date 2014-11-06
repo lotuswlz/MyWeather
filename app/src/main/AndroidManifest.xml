@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.thoughtworks.cathywu.myweather.ui.MyCitiesActivity" android:label="@string/search_city"/>
+        <activity android:name=".ui.CitySearchActivity" android:label="@string/search_city"/>
+        <activity android:name=".ui.MyCitiesActivity" android:label="@string/my_cities"/>
     </application>
 
 </manifest>

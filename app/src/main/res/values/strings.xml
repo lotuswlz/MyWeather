@@ -15,5 +15,7 @@
     <string name="clean_memory">清理内存</string>
     <string name="search_city_default_tip">请输入城市名</string>
     <string name="search_city">搜索城市</string>
+    <string name="my_cities_key">MY_CITIES_KEY</string>
+    <string name="add_city_button_text">添加城市</string>
 
 </resources>
